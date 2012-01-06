@@ -35,4 +35,19 @@ class Bug
      * @ManyToMany(targetEntity="Product")
      */
     private $products;
+    
+    public function setEngineer($e)
+    {
+        $this->engineer = $e;
+    }
+    
+    public function setReporter($r)
+    {
+        $this->reporter = $r;
+    }
+    
+    public function assignToProduct($p)
+    {
+        $this->products[] = $p;
+    }
 }
