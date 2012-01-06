@@ -6,11 +6,11 @@ set_include_path(
         PATH_SEPARATOR,
         array(
             __DIR__,
-            __DIR__ . '/lib',
-            get_include_path(),
+            realpath(__DIR__ . '/../lib'),
             realpath(__DIR__ . "/../../vendor/doctrine/lib"),
             realpath(__DIR__ . "/../../vendor/doctrine/lib/vendor/doctrine-common/lib"),
             realpath(__DIR__ . "/../../vendor/doctrine/lib/vendor/doctrine-dbal/lib"),
+            get_include_path(),
         )
     )
 );
@@ -25,7 +25,7 @@ $classLoader->register();
 $config = new Doctrine\ORM\Configuration(); // (2)
 
 // Proxy Configuration
-$config->setProxyDir(__DIR__ . '/lib/MyProject/Proxies');
+$config->setProxyDir(__DIR__ . '/../lib/MyProject/Proxies');
 $config->setProxyNamespace('MyProject\Proxies');
 $config->setAutoGenerateProxyClasses((APPLICATION_ENV == "development"));
 
