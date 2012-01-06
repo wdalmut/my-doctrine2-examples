@@ -2,16 +2,16 @@
 define ("APPLICATION_ENV", 'development');
 
 set_include_path(
-implode(
-PATH_SEPARATOR,
-array(
-__DIR__,
-get_include_path(),
-realpath(__DIR__ . "/../../vendor/doctrine/lib"),
-realpath(__DIR__ . "/../../vendor/doctrine/lib/vendor/doctrine-common/lib"),
-realpath(__DIR__ . "/../../vendor/doctrine/lib/vendor/doctrine-dbal/lib"),
-)
-)
+    implode(
+        PATH_SEPARATOR,
+        array(
+            __DIR__,
+            get_include_path(),
+            realpath(__DIR__ . "/../../vendor/doctrine/lib"),
+            realpath(__DIR__ . "/../../vendor/doctrine/lib/vendor/doctrine-common/lib"),
+            realpath(__DIR__ . "/../../vendor/doctrine/lib/vendor/doctrine-dbal/lib"),
+        )
+    )
 );
 
 require 'Doctrine/Common/ClassLoader.php';
