@@ -1,14 +1,14 @@
 <?php
 require_once 'bootstrap.php';
 
-$user = new User();
-$user->name = "wdalmut";
+$user = new MyProject\Models\User();
+$user->setName("wdalmut");
 
 $entityManager->persist($user);
 $entityManager->flush();
 
-$user = new User();
-$user->name = "gmittica";
+$user = new MyProject\Models\User();
+$user->setName("gmittica");
 
 $entityManager->persist($user);
 $entityManager->flush();

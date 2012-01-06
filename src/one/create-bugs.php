@@ -2,17 +2,17 @@
 require_once 'bootstrap.php';
 
 $reporter = $entityManager->find("\MyProject\Models\User", 1);
-echo "REPORTER {$reporter->name}" . PHP_EOL;
+echo "REPORTER {$reporter->getName()}" . PHP_EOL;
 //Select from user
 
 $engineer = $entityManager->find("\MyProject\Models\User", 2);
-echo "ENGINEER {$engineer->name}" . PHP_EOL;
+echo "ENGINEER {$engineer->getName()}" . PHP_EOL;
 //Select from user
 
-$bug = new Bug();
-$bug->description = "This is the description";
-$bug->created =  new DateTime("now");
-$bug->status = "NEW";
+$bug = new \MyProject\Models\Bug();
+$bug->setDescription("This is the description");
+$bug->setDateCreated(new DateTime("now"));
+$bug->setStatus("NEW");
 
 $productIds = array('1');
 
@@ -33,4 +33,4 @@ $bug->setEngineer($engineer);
 $entityManager->persist($bug);
 $entityManager->flush();
 
-echo "Your new Bug Id: ".$bug->id."\n";
+echo "Your new Bug Id: {$bug->getId()}" . PHP_EOL;

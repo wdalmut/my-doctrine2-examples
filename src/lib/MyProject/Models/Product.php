@@ -10,12 +10,22 @@ class Product
      * @Id @Column(type="integer") @GeneratedValue
      * @var int 
      */
-    public $id;
+    private $id;
     /** 
      * @Column(type="string") 
      * @var string 
      */
-    public $name;
+    private $name;
+    
+    /**
+     * Set the product id
+     * 
+     * @param int $id
+     */
+    public  function setId($id)
+    {
+        $this->id = $id;
+    }
     
     /**
      * Retrive the product id
@@ -25,6 +35,16 @@ class Product
     public function getId()
     {
         return $this->id;
+    }
+    
+    /**
+     * Set the product name
+     * 
+     * @param string $name
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
     }
     
     /**

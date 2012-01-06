@@ -10,25 +10,25 @@ class User
      * @Id @GeneratedValue @Column(type="integer")
      * @var string
      */
-    public $id;
+    private $id;
 
     /**
      * @Column(type="string")
      * @var string
      */
-    public $name;
+    private $name;
 
     /**
      * @OneToMany(targetEntity="Bug", mappedBy="reporter")
      * @var Bug[]
      */
-    protected $reportedBugs = null;
+    private $reportedBugs = null;
 
     /**
      * @OneToMany(targetEntity="Bug", mappedBy="engineer")
      * @var Bug[]
      */
-    protected $assignedBugs = null;
+    private $assignedBugs = null;
     
     /**
      * Retrive user assigned bugs

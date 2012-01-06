@@ -9,20 +9,20 @@ class Bug
     /**
      * @Id @Column(type="integer") @GeneratedValue
      */
-    public $id;
+    private $id;
     /**
      * @Column(type="string")
      * @var string
      */
-    public $description;
+    private $description;
     /**
      * @Column(type="datetime")
      */
-    public $created;
+    private $created;
     /**
      * @Column(type="string")
      */
-    public $status;
+    private $status;
 
     /**
      * @ManyToOne(targetEntity="User", inversedBy="assignedBugs")
@@ -135,7 +135,7 @@ class Bug
         return $this->id;
     }
     
-    public function setDateCreated(DateTime $dateCreated)
+    public function setDateCreated(\DateTime $dateCreated)
     {
         $this->created = $dateCreated;
     }
