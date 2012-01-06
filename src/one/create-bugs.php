@@ -1,11 +1,11 @@
 <?php 
 require_once 'bootstrap.php';
 
-$reporter = $entityManager->find("User", 1);
+$reporter = $entityManager->find("\MyProject\Models\User", 1);
 echo "REPORTER {$reporter->name}" . PHP_EOL;
 //Select from user
 
-$engineer = $entityManager->find("User", 2);
+$engineer = $entityManager->find("\MyProject\Models\User", 2);
 echo "ENGINEER {$engineer->name}" . PHP_EOL;
 //Select from user
 
@@ -23,7 +23,7 @@ $entityManager->flush();
 $productIds = array(1);
 
 foreach ($productIds AS $productId) {
-    $product = $entityManager->find("Product", $productId);
+    $product = $entityManager->find("\MyProject\Models\Product", $productId);
     $bug->assignToProduct($product);
 }
 

@@ -6,6 +6,7 @@ set_include_path(
         PATH_SEPARATOR,
         array(
             __DIR__,
+            __DIR__ . '/lib',
             get_include_path(),
             realpath(__DIR__ . "/../../vendor/doctrine/lib"),
             realpath(__DIR__ . "/../../vendor/doctrine/lib/vendor/doctrine-common/lib"),
@@ -18,9 +19,8 @@ require 'Doctrine/Common/ClassLoader.php';
 $classLoader = new \Doctrine\Common\ClassLoader('Doctrine');
 $classLoader->register();
 
-require_once 'User.php';
-require_once 'Product.php';
-require_once 'Bug.php';
+$classLoader = new \Doctrine\Common\ClassLoader('MyProject');
+$classLoader->register();
 
 $config = new Doctrine\ORM\Configuration(); // (2)
 

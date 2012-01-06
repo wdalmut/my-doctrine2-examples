@@ -1,7 +1,7 @@
 <?php 
 require_once 'bootstrap.php';
 
-$user = $entityManager->find("User", 2);
+$user = $entityManager->find("\MyProject\Models\User", 2);
 
 echo "User name: {$user->getName()}" . PHP_EOL;
 

@@ -1,7 +1,7 @@
 <?php 
 require_once 'bootstrap.php';
 
-$bug = $entityManager->find("Bug", 1);
+$bug = $entityManager->find("\MyProject\Models\Bug", 1);
 
 echo "Bug description: {$bug->description}" . PHP_EOL;
 

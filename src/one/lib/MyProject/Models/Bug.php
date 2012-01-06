@@ -1,4 +1,6 @@
 <?php
+namespace MyProject\Models;
+
 /**
  * @Entity @Table(name="bugs")
  */
