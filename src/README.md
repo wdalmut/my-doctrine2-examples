@@ -30,3 +30,8 @@ sqlite3 db.sqlite < used-db.sql
 ```
 
 Now you can run examples
+
+###Not standard database name convention
+
+Into folder ```no-std-db-naming``` an example of Doctrine2 usage with not standard
+naming of tables and fields.
