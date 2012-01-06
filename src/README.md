@@ -5,7 +5,7 @@
 ```Products``` is the same concept of ```Users``` table.
 
 ```Bugs``` is quite complicated because the table have a ```reporter``` 
-column that is a link with ```User``` (one-to-one) and the same
+column that is a link with ```User``` (many-to-one) and the same
 concept is applied to ```engineer``` column.
 After that consider that Bugs and Product is connected with a many-to-many
 relation.
