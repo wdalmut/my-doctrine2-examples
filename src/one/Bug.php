@@ -56,8 +56,33 @@ class Bug
         $this->reporter = $r;
     }
     
+    /**
+     * Assign this bug to a product
+     * 
+     * @param Product $p
+     */
     public function assignToProduct(Product $p)
     {
         $this->products[] = $p;
+    }
+    
+    /**
+     * Retrive the bug reporter
+     * 
+     * @return User The user that reports this bug
+     */
+    public function getReporter()
+    {
+        return $this->reporter;
+    }
+    
+    /**
+     * Get the engineer that works on this bug
+     * 
+     * @return User The user that works on this bug
+     */
+    public function getEngineer()
+    {
+        return $this->engineer;
     }
 }
