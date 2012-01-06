@@ -19,3 +19,19 @@ After that consider that Bugs and Product is connected with a many-to-many
 relation.
 
 This schema is extracted and modified from ```Zend_Db_Table``` docs.
+
+## Example
+
+```
+$ sqlite3 db.sqlite < used-db.sql #create the schema
+
+$ php create-users.php #create users
+...
+$ php create-product.php #create products
+...
+$ php create-bugs.php #create bugs with product and user links!
+...
+```
+
+Check your sqlite database. Now you have 2 users, 1 product and one bug linked 
+with users and product.
