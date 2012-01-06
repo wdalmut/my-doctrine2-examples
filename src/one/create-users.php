@@ -1,20 +1,16 @@
 <?php
 require_once 'bootstrap.php';
 
-$newUsername = "wdalmut";
-
 $user = new User();
-$user->name = $newUsername;
+$user->name = "wdalmut";
 
 $entityManager->persist($user);
 $entityManager->flush();
 
-$newUsername = "gmittica";
-
 $user = new User();
-$user->name = $newUsername;
+$user->name = "gmittica";
 
 $entityManager->persist($user);
 $entityManager->flush();
 
-echo "CREATED" . PHP_EOL;
+echo "USERS CREATED" . PHP_EOL;

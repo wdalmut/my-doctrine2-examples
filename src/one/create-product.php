@@ -1,10 +1,8 @@
 <?php
 require_once 'bootstrap.php';
 
-$newProductName = "My Product";
-
 $product = new Product();
-$product->name = $newProductName;
+$product->name = "My Product";
 
 $entityManager->persist($product);
 $entityManager->flush();
