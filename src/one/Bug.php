@@ -36,17 +36,27 @@ class Bug
      */
     private $products;
     
-    public function setEngineer($e)
+    /**
+     * Set the engineer for this bug
+     * 
+     * @param User $e
+     */
+    public function setEngineer(User $e)
     {
         $this->engineer = $e;
     }
     
-    public function setReporter($r)
+    /**
+     * Set the reporter for this bug
+     * 
+     * @param User $r
+     */
+    public function setReporter(User $r)
     {
         $this->reporter = $r;
     }
     
-    public function assignToProduct($p)
+    public function assignToProduct(Product $p)
     {
         $this->products[] = $p;
     }
