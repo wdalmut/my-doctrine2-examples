@@ -10,6 +10,7 @@ class Bug
     public $id;
     /**
      * @Column(type="string")
+     * @var string
      */
     public $description;
     /**
@@ -33,6 +34,7 @@ class Bug
 
     /**
      * @ManyToMany(targetEntity="Product")
+     * @var Product[]
      */
     private $products;
     
@@ -47,6 +49,16 @@ class Bug
     }
     
     /**
+     * Get the engineer that works on this bug
+     *
+     * @return User The user that works on this bug
+     */
+    public function getEngineer()
+    {
+        return $this->engineer;
+    }
+    
+    /**
      * Set the reporter for this bug
      * 
      * @param User $r
@@ -54,6 +66,16 @@ class Bug
     public function setReporter(User $r)
     {
         $this->reporter = $r;
+    }
+    
+    /**
+     * Retrive the bug reporter
+     *
+     * @return User The user that reports this bug
+     */
+    public function getReporter()
+    {
+        return $this->reporter;
     }
     
     /**
@@ -67,22 +89,77 @@ class Bug
     }
     
     /**
-     * Retrive the bug reporter
+     * Retrive products linked to this bug
      * 
-     * @return User The user that reports this bug
+     * @return Product[] 
      */
-    public function getReporter()
+    public function getProducts()
     {
-        return $this->reporter;
+        return $this->products;
     }
     
     /**
-     * Get the engineer that works on this bug
+     * Set description for this bug
      * 
-     * @return User The user that works on this bug
+     * @param string $description
      */
-    public function getEngineer()
+    public function setDescription($description)
     {
-        return $this->engineer;
+        $this->description = $description;
+    }
+    
+    /**
+     * Retrive the bug description
+     * 
+     * @return string the bug desc
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+    
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+    
+    /**
+     * Get the bug id
+     * 
+     * @return int The bug id
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+    
+    public function setDateCreated(DateTime $dateCreated)
+    {
+        $this->created = $dateCreated;
+    }
+    
+    /**
+     * Retrive the creation date
+     * 
+     * @return DateTime
+     */
+    public function getDateCreated()
+    {
+        return $this->created;
+    }
+    
+    public function setStatus($status)
+    {
+        $this->status = $status;
+    }
+    
+    /**
+     * Retrive the bug status
+     * 
+     * @return string the bug status
+     */
+    public function getStatus()
+    {
+        return $this->created;
     }
 }
