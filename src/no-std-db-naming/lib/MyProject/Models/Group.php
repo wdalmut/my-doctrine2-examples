@@ -45,13 +45,13 @@ class Group
         return $this->name;
     }
     
-    public function add(\MyProject\Models\Group $group)
+    public function add(\MyProject\Models\User $user)
     {
-        $this->groups[] = $group;
+        $this->users[] = $user;
     }
     
-    public function getGroups()
+    public function getUsers()
     {
-        return $this->groups;
+        return $this->users;
     }
 }
