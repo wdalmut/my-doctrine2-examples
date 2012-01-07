@@ -4,7 +4,7 @@
 
 ```GGroup``` is the same concept of ```User``` table.
 
-User and group table are link together by ```User_has_Group``` table 
+Users and groups table are link together by ```User_has_Group``` table 
 that is the many-to-many support table.
 
 This schema use not conventional table naming for checking long entity descriptions.
