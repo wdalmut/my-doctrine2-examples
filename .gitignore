@@ -2,3 +2,7 @@
 .buildpath
 .settings
 *.sqlite
+*.phar
+vendor
+*.swp
+*.swo
