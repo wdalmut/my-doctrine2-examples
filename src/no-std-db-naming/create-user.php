@@ -1,4 +1,4 @@
-<?php 
+<?php
 require_once 'bootstrap.php';
 
 $user = new \MyProject\Models\User();

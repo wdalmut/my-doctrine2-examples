@@ -1,4 +1,4 @@
-<?php 
+<?php
 require_once 'bootstrap.php';
 
 $group = new \MyProject\Models\Group();
