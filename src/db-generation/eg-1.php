@@ -7,10 +7,9 @@ $post->setTitle("Hello world");
 
 $page = new \Wdm\Model\Page();
 $page->setContent("This is my body content");
-$entityManager->persist($page);
-
 $page->setPost($post);
 
+$entityManager->persist($page);
 $entityManager->persist($post);
 $entityManager->flush();
 
