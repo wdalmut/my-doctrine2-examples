@@ -1,4 +1,4 @@
-<?php 
+<?php
 require_once 'bootstrap.php';
 
 $reporter = $entityManager->find("\MyProject\Models\User", 1);
