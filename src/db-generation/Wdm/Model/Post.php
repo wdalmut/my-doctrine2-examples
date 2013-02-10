@@ -19,10 +19,10 @@ class Post
     private $title;
 
     /**
-     * @OneToMany(targetEntity="Page", mappedBy="page")
-     * @var Wdm/Model/Page[]
+     * @OneToMany(targetEntity="Page", mappedBy="post")
+     * @var Page[]
      */
-    protected $pages = null;
+    private $pages = null;
 
     public function getId()
     {

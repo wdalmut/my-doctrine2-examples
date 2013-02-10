@@ -13,7 +13,7 @@ class Page
     private $id;
 
     /**
-     * @ManyToOne(targetEntity="Wdm\Model\Post", inversedBy="pages")
+     * @ManyToOne(targetEntity="Post", inversedBy="pages")
      */
     private $post;
 
