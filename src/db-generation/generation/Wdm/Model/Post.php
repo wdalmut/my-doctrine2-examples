@@ -19,7 +19,7 @@ class Post
     private $title;
 
     /**
-     * @OneToMany(targetEntity="Page", mappedBy="post", cascade={"persist", "remove"})
+     * @OneToMany(targetEntity="Page", mappedBy="post")
      * @var Page[]
      */
     private $pages = null;
@@ -37,11 +37,6 @@ class Post
     public function getTitle()
     {
         return $this->title;
-    }
-
-    public function addPage(Page $page)
-    {
-        $this->pages[] = $page;
     }
 
     public function getPages()

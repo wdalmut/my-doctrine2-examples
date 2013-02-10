@@ -14,6 +14,7 @@ class Page
 
     /**
      * @ManyToOne(targetEntity="Post", inversedBy="pages")
+     * @var Post
      */
     private $post;
 
@@ -21,6 +22,11 @@ class Page
      * @Column(type="string")
      */
     private $content;
+
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
 
     public function getId()
     {

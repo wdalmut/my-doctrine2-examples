@@ -2,18 +2,11 @@
 
 require_once __DIR__ . '/generation/bootstrap.php';
 
-$post = new \Wdm\Model\Post();
-$post->setTitle("Hello world");
+$post = $entityManager->find("\Wdm\Model\Post", 1);
+$pages = $post->getPages();
 
-$page = new \Wdm\Model\Page();
-$page->setContent("This is my body content 1");
-$post->addPage($page);
+foreach ($pages as $page) {
+    echo "\t" . $page->getContent() . PHP_EOL;
+}
 
-$page = new \Wdm\Model\Page();
-$page->setContent("This is my body content 2");
-$post->addPage($page);
-
-$entityManager->persist($post);
-$entityManager->flush();
-
-echo "New post created" . PHP_EOL;
+echo "end..." . PHP_EOL;

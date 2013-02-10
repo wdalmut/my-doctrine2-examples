@@ -1,21 +1,18 @@
 <?php
 require_once __DIR__ . '/../../../vendor/autoload.php';
 
-require_once __DIR__ . '/Wdm/Model/Page.php';
-require_once __DIR__ . '/Wdm/Model/Post.php';
-
 define ("APPLICATION_ENV", 'development');
 
 $classLoader = new \Doctrine\Common\ClassLoader('Doctrine');
 $classLoader->register();
 
-$classLoader = new \Doctrine\Common\ClassLoader('Wdm');
+$classLoader = new \Doctrine\Common\ClassLoader('Wdm', __DIR__);
 $classLoader->register();
 
 $config = new Doctrine\ORM\Configuration(); // (2)
 
 // Proxy Configuration
-$config->setProxyDir(__DIR__ . '/../Wdm/Proxies');
+$config->setProxyDir(__DIR__ . '/Wdm/Proxies');
 $config->setProxyNamespace('Wdm\Proxies');
 $config->setAutoGenerateProxyClasses((APPLICATION_ENV == "development"));
 
