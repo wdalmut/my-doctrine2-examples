@@ -1,15 +1,11 @@
 # Doctrine 2 examples
 
-Only examples for using Doctrine 2...
+Just a list of simple and useless Doctrine2 examples
 
-No big deal...
+ * one
+   * Just the hello world
+ * no-std-db-naming
+   * Use doctrine using personal tables names
+ * db-generation
+   * Start write your model and create database from this.
 
-## Generate DB
-
-```
- $ sqlite3 db.sqlite < used-db.sql
-```
-
-## First example 
-
-Look into src/one for the first example
