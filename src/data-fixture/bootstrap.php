@@ -6,14 +6,14 @@ define ("APPLICATION_ENV", 'development');
 $classLoader = new \Doctrine\Common\ClassLoader('Doctrine');
 $classLoader->register();
 
-$classLoader = new \Doctrine\Common\ClassLoader('TestData', __DIR__ . '/src');
+$classLoader = new \Doctrine\Common\ClassLoader('DataFixture', __DIR__ . '/src');
 $classLoader->register();
 
 $config = new Doctrine\ORM\Configuration(); // (2)
 
 // Proxy Configuration
-$config->setProxyDir(__DIR__ . '/src/TestData/Proxies');
-$config->setProxyNamespace('TestData\Proxies');
+$config->setProxyDir(__DIR__ . '/src/DataFixture/Proxies');
+$config->setProxyNamespace('DataFixture\Proxies');
 $config->setAutoGenerateProxyClasses((APPLICATION_ENV == "development"));
 
 // Mapping Configuration
