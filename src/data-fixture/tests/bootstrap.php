@@ -1,7 +1,7 @@
 <?php
 
 $loader = include __DIR__ . "/../../../vendor/autoload.php";
-$loader->add('DataTestTest', __DIR__);
+$loader->add('DataFixtureTest', __DIR__);
 
 
 define ("APPLICATION_ENV", 'development');
